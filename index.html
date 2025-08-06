@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrategia Curly - Propuesta de Pre-Lanzamiento</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Estrategia Pre-Lanzamiento - Luxury Curly Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,141 +12,463 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --white: #FFFFFF;
+            --dusty-rose: #E8D5D5;
+            --sage-green: #C8D5C8;
+            --soft-lavender: #E6E0F0;
+            --sand-beige: #F5F1E8;
+            --champagne: #F7E7CE;
+            --gold-accent: #D4AF37;
+            --soft-gold: #F4E4BC;
+            --text-primary: #2C2C2C;
+            --text-secondary: #6B6B6B;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #8B4513;
-            background: linear-gradient(135deg, #FFE4E1 0%, #FFF8DC 50%, #F5DEB3 100%);
-            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--white);
+            font-weight: 300;
         }
 
-        .script-font {
-            font-family: 'Dancing Script', cursive;
+        .serif-font {
+            font-family: 'Playfair Display', serif;
         }
 
-        /* Elementos decorativos */
-        .curl-decoration {
+        /* Elementos decorativos sutiles */
+        .subtle-curve {
             position: absolute;
-            width: 100px;
-            height: 100px;
-            border-radius: 50% 20% 50% 20%;
-            background: linear-gradient(45deg, #FFB6C1, #DDA0DD);
-            opacity: 0.3;
-            animation: float 6s ease-in-out infinite;
+            width: 200px;
+            height: 200px;
+            border-radius: 50% 30% 50% 30%;
+            background: linear-gradient(135deg, var(--dusty-rose), transparent);
+            opacity: 0.1;
+            z-index: -1;
         }
 
-        .curl-decoration:nth-child(2) {
-            top: 20%;
-            right: 10%;
-            animation-delay: -2s;
-            background: linear-gradient(45deg, #F4A460, #DEB887);
+        .curve-1 {
+            top: 10%;
+            right: 5%;
+            animation: float 8s ease-in-out infinite;
         }
 
-        .curl-decoration:nth-child(3) {
-            bottom: 30%;
-            left: 5%;
-            animation-delay: -4s;
-            background: linear-gradient(45deg, #FFD700, #FFA500);
+        .curve-2 {
+            bottom: 20%;
+            left: 3%;
+            animation: float 8s ease-in-out infinite reverse;
+            background: linear-gradient(135deg, var(--sage-green), transparent);
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(10deg); }
-        }
-
-        .wave-pattern {
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(221, 160, 221, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(255, 215, 0, 0.2) 0%, transparent 50%);
+            50% { transform: translateY(-15px) rotate(5deg); }
         }
 
         /* Portada */
         .hero-section {
             min-height: 100vh;
-            background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(221, 160, 221, 0.8)), 
-                        url('/placeholder.svg?height=800&width=1200') center/cover;
+            background: linear-gradient(135deg, var(--white) 0%, var(--sand-beige) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
             position: relative;
-            border-radius: 0 0 50% 50% / 0 0 100px 100px;
+            padding: 80px 40px;
         }
 
         .hero-content {
-            max-width: 800px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .hero-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: url('/placeholder.svg?height=300&width=300') center/cover;
+            margin: 0 auto 60px;
+            border: 3px solid var(--champagne);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
         }
 
         .hero-content h1 {
             font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
         }
 
         .hero-content h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 30px;
-            color: #FFF8DC;
-            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
         }
 
         .brand-placeholder {
-            background: linear-gradient(135deg, #FFB6C1, #DDA0DD);
-            color: white;
-            padding: 20px 40px;
+            background: linear-gradient(135deg, var(--champagne), var(--soft-gold));
+            color: var(--text-primary);
+            padding: 20px 50px;
             border-radius: 50px;
-            font-size: 1.4rem;
-            font-weight: 600;
+            font-size: 1.1rem;
+            font-weight: 400;
             display: inline-block;
-            margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            font-family: 'Dancing Script', cursive;
+            margin-top: 30px;
+            border: 1px solid var(--gold-accent);
+            letter-spacing: 0.5px;
+        }
+
+        .gold-accent {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
         }
 
         /* Contenedor principal */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
+            padding: 0 40px;
         }
 
         /* Secciones */
         .section {
-            background: rgba(255, 255, 255, 0.9);
-            margin: 60px 0;
-            padding: 50px;
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 80px;
+            font-weight: 300;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold-accent);
+            margin: 0 auto 60px;
+        }
+
+        /* Cliente Ideal */
+        .client-profile {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .profile-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: var(--gold-accent);
+            border-radius: 0 0 10px 10px;
+        }
+
+        .profile-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--dusty-rose), var(--sage-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .profile-card:nth-child(2) .profile-icon {
+            background: linear-gradient(135deg, var(--sage-green), var(--soft-lavender));
+        }
+
+        .profile-card:nth-child(3) .profile-icon {
+            background: linear-gradient(135deg, var(--soft-lavender), var(--champagne));
+        }
+
+        .profile-card:nth-child(4) .profile-icon {
+            background: linear-gradient(135deg, var(--champagne), var(--dusty-rose));
+        }
+
+        .profile-card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .profile-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .profile-card li {
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .profile-card li:last-child {
+            border-bottom: none;
+        }
+
+        .profile-card li strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Ecosistema Digital */
+        .ecosystem {
+            background: linear-gradient(135deg, var(--sand-beige), var(--white));
+            padding: 80px 60px;
             border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .platform-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+
+        .platform-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .platform-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--dusty-rose), var(--sage-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .platform-item h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Fases */
+        .phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .phase-card {
+            background: var(--white);
+            padding: 50px 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.1);
+        }
+
+        .phase-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold-accent), var(--champagne));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 500;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .phase-card h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            margin-top: 10px;
+        }
+
+        .phase-objective {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .phase-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .phase-card li {
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .phase-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold-accent);
+            font-weight: bold;
+        }
+
+        /* Estrategias Premium */
+        .strategies {
+            background: linear-gradient(135deg, var(--white), var(--soft-lavender));
+            padding: 80px 0;
+            margin: 80px 0;
+            border-radius: 30px;
+        }
+
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            padding: 0 40px;
+        }
+
+        .strategy-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border: 1px solid var(--gold-accent);
+            border-width: 1px 1px 3px 1px;
+            transition: all 0.3s ease;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .strategy-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .strategy-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--dusty-rose), var(--champagne));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .strategy-card h4 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .strategy-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Beneficios VIP */
+        .vip-benefits {
+            background: linear-gradient(135deg, var(--sage-green), var(--dusty-rose));
+            color: white;
+            padding: 80px 60px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 80px 0;
             position: relative;
             overflow: hidden;
         }
 
-        .section::before {
+        .vip-benefits::before {
             content: '';
             position: absolute;
             top: -50%;
             left: -50%;
             width: 200%;
             height: 200%;
-            background: 
-                radial-gradient(circle at 30% 20%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 80%, rgba(221, 160, 221, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
             animation: rotate 20s linear infinite;
-            z-index: -1;
         }
 
         @keyframes rotate {
@@ -154,371 +476,92 @@
             100% { transform: rotate(360deg); }
         }
 
-        .section-title {
-            font-size: 3rem;
-            background: linear-gradient(135deg, #FF69B4, #DDA0DD, #FFD700);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 40px;
-            text-align: center;
-            position: relative;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .section-title::after {
-            content: '✨';
-            position: absolute;
-            right: -50px;
-            top: 0;
-            font-size: 2rem;
-            animation: sparkle 2s ease-in-out infinite;
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
-        }
-
-        /* Cliente Ideal */
-        .client-profile {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .profile-card {
-            background: linear-gradient(135deg, #FFE4E1, #F5DEB3);
-            padding: 30px;
-            border-radius: 25px;
-            border: 3px solid transparent;
-            background-clip: padding-box;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-card:hover {
-            transform: translateY(-10px) rotate(2deg);
-        }
-
-        .profile-card::before {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            background: linear-gradient(135deg, #FFB6C1, #DDA0DD, #FFD700);
-            border-radius: 25px;
-            z-index: -1;
-        }
-
-        .profile-card h3 {
-            color: #8B4513;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .profile-icon {
+        .vip-benefits h2 {
             font-size: 2.5rem;
-            background: linear-gradient(135deg, #FFB6C1, #DDA0DD);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 400;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
         }
 
-        .profile-card ul {
-            list-style: none;
+        .vip-benefits p {
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
         }
 
-        .profile-card li {
-            padding: 12px 0;
-            border-bottom: 2px dotted rgba(139, 69, 19, 0.2);
-            font-weight: 500;
-        }
-
-        .profile-card li:last-child {
-            border-bottom: none;
-        }
-
-        /* Ecosistema Digital */
-        .ecosystem {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .platform-card {
-            background: linear-gradient(135deg, #FFB6C1, #DDA0DD);
-            color: white;
-            padding: 30px;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .platform-card:hover {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .platform-card:nth-child(even) {
-            background: linear-gradient(135deg, #F4A460, #DEB887);
-        }
-
-        .platform-card:nth-child(3n) {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-        }
-
-        .platform-icon {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .platform-card h3 {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        /* Fases */
-        .phases {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 50px;
-        }
-
-        .phase-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 228, 225, 0.9));
-            border-radius: 25px;
-            padding: 30px;
-            text-align: center;
             position: relative;
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-            background-clip: padding-box;
-        }
-
-        .phase-card::before {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            background: linear-gradient(135deg, #FFB6C1, #DDA0DD, #FFD700, #F4A460);
-            border-radius: 25px;
-            z-index: -1;
-        }
-
-        .phase-card:hover {
-            transform: translateY(-15px);
-        }
-
-        .phase-number {
-            background: linear-gradient(135deg, #FF69B4, #DDA0DD);
-            color: white;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 0 auto 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .phase-card h3 {
-            color: #8B4513;
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .phase-card p {
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .phase-card ul {
-            text-align: left;
-            list-style: none;
-        }
-
-        .phase-card li {
-            padding: 8px 0;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .phase-card li::before {
-            content: '🌸';
-            position: absolute;
-            left: 0;
-            top: 8px;
-        }
-
-        /* Estrategias - Moodboard */
-        .strategies-moodboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .strategy-card {
-            background: linear-gradient(135deg, #FFF8DC, #FFE4E1);
-            border-radius: 20px;
-            padding: 25px;
-            position: relative;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 182, 193, 0.3);
-        }
-
-        .strategy-card:hover {
-            transform: rotate(-2deg) scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-
-        .strategy-card h4 {
-            color: #8B4513;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .mock-content {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 15px 0;
-            border-left: 5px solid #FFB6C1;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Beneficios Exclusivos */
-        .exclusive-benefits {
-            background: linear-gradient(135deg, #FFB6C1, #DDA0DD, #FFD700);
-            color: white;
-            text-align: center;
-            padding: 50px;
-            border-radius: 30px;
-            margin: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .exclusive-benefits::before {
-            content: '✨';
-            position: absolute;
-            font-size: 5rem;
-            opacity: 0.2;
-            top: 20px;
-            left: 20px;
-            animation: sparkle 3s ease-in-out infinite;
-        }
-
-        .exclusive-benefits::after {
-            content: '💫';
-            position: absolute;
-            font-size: 4rem;
-            opacity: 0.2;
-            bottom: 20px;
-            right: 20px;
-            animation: sparkle 3s ease-in-out infinite reverse;
-        }
-
-        .exclusive-benefits h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .benefits-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            z-index: 2;
         }
 
         .benefit-item {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px 25px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .benefit-item h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0;
         }
 
         /* CTA Final */
         .final-cta {
-            background: linear-gradient(135deg, #FF69B4, #DDA0DD, #FFD700);
-            color: white;
+            background: var(--white);
             text-align: center;
-            padding: 80px 40px;
-            border-radius: 30px;
-            margin-top: 60px;
+            padding: 120px 60px;
             position: relative;
-            overflow: hidden;
-        }
-
-        .final-cta::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: 
-                radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: rotate 15s linear infinite;
         }
 
         .final-cta h2 {
-            font-size: 3rem;
-            margin-bottom: 30px;
-            font-family: 'Dancing Script', cursive;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--gold-accent);
+            margin-bottom: 40px;
+            letter-spacing: -0.01em;
         }
 
         .final-cta p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-button {
-            background: white;
-            color: #8B4513;
-            padding: 20px 50px;
+            background: linear-gradient(135deg, var(--gold-accent), var(--champagne));
+            color: white;
+            padding: 18px 50px;
             border: none;
             border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.1rem;
+            font-weight: 400;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            font-family: 'Dancing Script', cursive;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            letter-spacing: 0.5px;
         }
 
         .cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
         }
 
         /* Responsive */
@@ -528,263 +571,286 @@
             }
             
             .hero-content h2 {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             
             .section {
-                padding: 30px 20px;
+                padding: 80px 0;
             }
             
             .section-title {
                 font-size: 2.2rem;
             }
             
-            .platform-card {
-                width: 120px;
-                height: 120px;
+            .container {
+                padding: 0 20px;
             }
             
-            .final-cta h2 {
-                font-size: 2.2rem;
+            .ecosystem,
+            .strategies,
+            .vip-benefits,
+            .final-cta {
+                padding: 60px 30px;
+            }
+            
+            .strategies-grid {
+                padding: 0 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Elementos decorativos flotantes -->
-    <div class="curl-decoration"></div>
-    <div class="curl-decoration"></div>
-    <div class="curl-decoration"></div>
+    <!-- Elementos decorativos -->
+    <div class="subtle-curve curve-1"></div>
+    <div class="subtle-curve curve-2"></div>
 
     <!-- Portada -->
-    <div class="hero-section wave-pattern">
+    <div class="hero-section">
         <div class="hero-content">
-            <h1>Estrategia de Contenido y Captación Pre-Lanzamiento</h1>
-            <h2 class="script-font">Propuesta personalizada para tu marca curly</h2>
-            <div class="brand-placeholder">✨ Tu Marca Curly ✨</div>
+            <div class="hero-image"></div>
+            <h1 class="serif-font">Estrategia de Contenido y Captación Pre-Lanzamiento</h1>
+            <h2>Propuesta personalizada para tu marca de cuidado capilar premium</h2>
+            <div class="brand-placeholder serif-font">Tu Marca Premium</div>
         </div>
+        <div class="gold-accent"></div>
     </div>
 
     <div class="container">
         <!-- Perfil del Cliente Ideal -->
         <section class="section">
-            <h2 class="section-title script-font">Conoce a tu Curly Girl Ideal</h2>
+            <h2 class="section-title serif-font">Perfil del Cliente Ideal</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Conoce a tu audiencia premium de cuidado capilar natural</p>
+            
             <div class="client-profile">
                 <div class="profile-card">
-                    <h3><span class="profile-icon">👩‍🦱</span>Perfil Demográfico</h3>
+                    <div class="profile-icon">👤</div>
+                    <h3 class="serif-font">Demografía</h3>
                     <ul>
-                        <li><strong>Edad:</strong> 22-35 años ✨</li>
-                        <li><strong>Género:</strong> Mujeres (85%) 💕</li>
-                        <li><strong>Ubicación:</strong> Ciudades LATAM 🌎</li>
-                        <li><strong>Ingresos:</strong> $800-2500 USD 💰</li>
-                        <li><strong>Educación:</strong> Universitaria 🎓</li>
+                        <li><strong>Edad:</strong> 25-40 años</li>
+                        <li><strong>Género:</strong> Mujeres (90%)</li>
+                        <li><strong>Ubicación:</strong> Ciudades principales</li>
+                        <li><strong>Ingresos:</strong> $1,500-4,000 USD</li>
+                        <li><strong>Educación:</strong> Universitaria/Posgrado</li>
                     </ul>
                 </div>
                 
                 <div class="profile-card">
-                    <h3><span class="profile-icon">🌀</span>Rutina Curly</h3>
+                    <div class="profile-icon">💫</div>
+                    <h3 class="serif-font">Cuidado Capilar</h3>
                     <ul>
-                        <li><strong>Tipo:</strong> Rizos 2A-3C 🌊</li>
-                        <li><strong>Método:</strong> Curly Girl Method 💫</li>
-                        <li><strong>Compras:</strong> Cada 2-3 meses 🛍️</li>
-                        <li><strong>Gasto:</strong> $30-80 por producto 💸</li>
-                        <li><strong>Prioridad:</strong> Ingredientes naturales 🌿</li>
+                        <li><strong>Tipo:</strong> Cabello rizado 2A-3C</li>
+                        <li><strong>Rutina:</strong> Método Curly Girl</li>
+                        <li><strong>Frecuencia:</strong> Compra cada 2-3 meses</li>
+                        <li><strong>Inversión:</strong> $50-150 por producto</li>
+                        <li><strong>Preferencia:</strong> Ingredientes premium</li>
                     </ul>
                 </div>
                 
                 <div class="profile-card">
-                    <h3><span class="profile-icon">📱</span>Vida Digital</h3>
+                    <div class="profile-icon">📱</div>
+                    <h3 class="serif-font">Comportamiento Digital</h3>
                     <ul>
-                        <li><strong>Plataformas:</strong> IG, TikTok, YouTube 📲</li>
-                        <li><strong>Tiempo online:</strong> 3-4 horas/día ⏰</li>
-                        <li><strong>Contenido fav:</strong> Tutoriales, B&A 🎬</li>
-                        <li><strong>Influencers:</strong> Micro especializados 👑</li>
-                        <li><strong>Engagement:</strong> Alto en comunidades 💬</li>
+                        <li><strong>Plataformas:</strong> Instagram, YouTube, TikTok</li>
+                        <li><strong>Tiempo:</strong> 2-3 horas diarias</li>
+                        <li><strong>Contenido:</strong> Tutoriales, reviews</li>
+                        <li><strong>Influencia:</strong> Expertos especializados</li>
+                        <li><strong>Engagement:</strong> Alto en comunidades nicho</li>
                     </ul>
                 </div>
                 
                 <div class="profile-card">
-                    <h3><span class="profile-icon">💖</span>Valores & Intereses</h3>
+                    <div class="profile-icon">✨</div>
+                    <h3 class="serif-font">Valores & Motivaciones</h3>
                     <ul>
-                        <li><strong>Valores:</strong> Autenticidad, naturalidad 🌸</li>
-                        <li><strong>Intereses:</strong> Belleza natural, wellness 🧘‍♀️</li>
-                        <li><strong>Motivación:</strong> Autoestima, comunidad 👭</li>
-                        <li><strong>Pain point:</strong> Productos que no funcionan 😔</li>
-                        <li><strong>Aspiración:</strong> Rizos definidos y sanos ✨</li>
+                        <li><strong>Valores:</strong> Calidad, sostenibilidad</li>
+                        <li><strong>Motivación:</strong> Autoexpresión, confianza</li>
+                        <li><strong>Aspiración:</strong> Cabello saludable y definido</li>
+                        <li><strong>Frustración:</strong> Productos que no cumplen</li>
+                        <li><strong>Decisión:</strong> Basada en resultados reales</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- Ecosistema Digital -->
-        <section class="section">
-            <h2 class="section-title script-font">Nuestro Ecosistema Curly</h2>
-            <div class="ecosystem">
-                <div class="platform-card">
+        <div class="ecosystem">
+            <h2 class="section-title serif-font">Ecosistema Digital Premium</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Canales estratégicos para alcanzar a tu audiencia objetivo</p>
+            
+            <div class="ecosystem-grid">
+                <div class="platform-item">
                     <div class="platform-icon">📸</div>
-                    <h3>Instagram</h3>
+                    <h4>Instagram</h4>
                 </div>
-                
-                <div class="platform-card">
+                <div class="platform-item">
                     <div class="platform-icon">🎵</div>
-                    <h3>TikTok</h3>
+                    <h4>TikTok</h4>
                 </div>
-                
-                <div class="platform-card">
+                <div class="platform-item">
                     <div class="platform-icon">📘</div>
-                    <h3>Facebook</h3>
+                    <h4>Facebook</h4>
                 </div>
-                
-                <div class="platform-card">
+                <div class="platform-item">
                     <div class="platform-icon">💬</div>
-                    <h3>WhatsApp</h3>
+                    <h4>WhatsApp</h4>
                 </div>
-                
-                <div class="platform-card">
+                <div class="platform-item">
                     <div class="platform-icon">✈️</div>
-                    <h3>Telegram</h3>
+                    <h4>Telegram</h4>
                 </div>
-                
-                <div class="platform-card">
+                <div class="platform-item">
                     <div class="platform-icon">🌐</div>
-                    <h3>Landing Page</h3>
+                    <h4>Landing Page</h4>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Fases del Pre-Lanzamiento -->
         <section class="section">
-            <h2 class="section-title script-font">4 Meses de Magia Curly</h2>
+            <h2 class="section-title serif-font">Fases del Pre-Lanzamiento</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Estrategia de 4 meses para construir expectativa y comunidad</p>
+            
             <div class="phases">
                 <div class="phase-card">
                     <div class="phase-number">1</div>
-                    <h3>Mes 1: ¡Despierta la Curiosidad!</h3>
-                    <p><strong>"Algo increíble viene..."</strong></p>
+                    <h3 class="serif-font">Mes 1: Despertar Interés</h3>
+                    <p class="phase-objective">Generar curiosidad y awareness inicial</p>
                     <ul>
-                        <li>Teasers misteriosos con ondas</li>
-                        <li>Behind the scenes del laboratorio</li>
-                        <li>Encuestas sobre necesidades curly</li>
-                        <li>Primeros 1000 seguidores</li>
+                        <li>Contenido teaser elegante y misterioso</li>
+                        <li>Behind the scenes del proceso de desarrollo</li>
+                        <li>Investigación de necesidades del mercado</li>
+                        <li>Construcción de base de seguidores premium</li>
                     </ul>
                 </div>
                 
                 <div class="phase-card">
                     <div class="phase-number">2</div>
-                    <h3>Mes 2: Conecta Corazones</h3>
-                    <p><strong>"Nuestra historia es tu historia"</strong></p>
+                    <h3 class="serif-font">Mes 2: Crear Conexión</h3>
+                    <p class="phase-objective">Establecer vínculo emocional y confianza</p>
                     <ul>
-                        <li>Historia de la fundadora</li>
-                        <li>Valores de la marca</li>
-                        <li>Contenido educativo curly</li>
-                        <li>Interacción 1:1 con seguidoras</li>
+                        <li>Historia auténtica de la marca</li>
+                        <li>Valores compartidos y filosofía</li>
+                        <li>Contenido educativo de alto valor</li>
+                        <li>Interacción personalizada con la audiencia</li>
                     </ul>
                 </div>
                 
                 <div class="phase-card">
                     <div class="phase-number">3</div>
-                    <h3>Mes 3: Construye la Tribu</h3>
-                    <p><strong>"Juntas somos más fuertes"</strong></p>
+                    <h3 class="serif-font">Mes 3: Construir Comunidad</h3>
+                    <p class="phase-objective">Formar una tribu leal de early adopters</p>
                     <ul>
-                        <li>Grupo VIP "Curly Sisters"</li>
-                        <li>Contenido colaborativo</li>
+                        <li>Comunidad VIP exclusiva</li>
+                        <li>Contenido colaborativo con la audiencia</li>
                         <li>Testimonios de beta testers</li>
-                        <li>Programa de embajadoras</li>
+                        <li>Programa de embajadoras premium</li>
                     </ul>
                 </div>
                 
                 <div class="phase-card">
                     <div class="phase-number">4</div>
-                    <h3>Mes 4: ¡El Gran Reveal!</h3>
-                    <p><strong>"Por fin llegó el momento"</strong></p>
+                    <h3 class="serif-font">Mes 4: Pre-Lanzamiento</h3>
+                    <p class="phase-objective">Maximizar conversión y expectativa</p>
                     <ul>
                         <li>Reveal completo del producto</li>
-                        <li>Lista de espera VIP</li>
-                        <li>Pre-venta exclusiva 48h</li>
+                        <li>Lista de espera VIP con beneficios</li>
+                        <li>Pre-venta exclusiva limitada</li>
                         <li>Countdown al lanzamiento oficial</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Estrategias Clave - Moodboard -->
-        <section class="section">
-            <h2 class="section-title script-font">Moodboard de Contenido</h2>
-            <div class="strategies-moodboard">
+        <!-- Estrategias Premium -->
+        <div class="strategies">
+            <h2 class="section-title serif-font">Estrategias Clave de Contenido</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">Tácticas premium para generar engagement y conversión</p>
+            
+            <div class="strategies-grid">
                 <div class="strategy-card">
-                    <h4>📸 Posts Teaser</h4>
-                    <div class="mock-content">
-                        <p><strong>🌿 Algo mágico está creciendo...</strong></p>
-                        <p>Después de 2 años perfeccionando LA fórmula que nuestros rizos merecen... ✨</p>
-                        <p><em>¿Adivinas qué es? 👀</em></p>
-                        <p>#ComingSoon #CurlyMagic #NaturalCare</p>
+                    <div class="strategy-header">
+                        <div class="strategy-icon">🎭</div>
+                        <h4>Contenido Teaser Premium</h4>
                     </div>
+                    <p>Contenido elegante y misterioso que genere curiosidad sin revelar completamente el producto, manteniendo la estética luxury.</p>
                 </div>
                 
                 <div class="strategy-card">
-                    <h4>📊 Stories Interactivos</h4>
-                    <div class="mock-content">
-                        <p><strong>¡Curly girls, necesito su ayuda! 🤔</strong></p>
-                        <p>¿Cuál es tu MAYOR frustración con los productos actuales?</p>
-                        <p>A) No definen mis rizos 😔<br>
-                        B) Dejan el cabello pesado 😩<br>
-                        C) Se acaban muy rápido 💸<br>
-                        D) No huelen rico 👃</p>
+                    <div class="strategy-header">
+                        <div class="strategy-icon">📖</div>
+                        <h4>Storytelling Auténtico</h4>
                     </div>
+                    <p>Narrativa real y emocional sobre la creación del producto, los valores de la marca y el compromiso con la comunidad curly.</p>
                 </div>
                 
                 <div class="strategy-card">
-                    <h4>🎵 Challenge Viral</h4>
-                    <div class="mock-content">
-                        <p><strong>#RetoMisCresposEn4Semanas</strong></p>
-                        <p>📹 Día 1: Muestra tu rutina actual</p>
-                        <p>📅 Semana a semana: Documenta cambios</p>
-                        <p>🏆 Mejores transformaciones: Productos gratis</p>
-                        <p>💪 ¡Únete a la revolución curly!</p>
+                    <div class="strategy-header">
+                        <div class="strategy-icon">⏰</div>
+                        <h4>Exclusividad Temporal</h4>
                     </div>
+                    <p>Estrategias de escasez elegante con acceso limitado, fechas exclusivas y beneficios VIP para early adopters.</p>
                 </div>
                 
                 <div class="strategy-card">
-                    <h4>💌 Email Exclusivo VIP</h4>
-                    <div class="mock-content">
-                        <p><strong>Asunto: 🔥 Solo para ti: Primera imagen</strong></p>
-                        <p>Hola bella curly,</p>
-                        <p>Como VIP, eres la PRIMERA en ver esto... 👀</p>
-                        <p>[Imagen exclusiva del producto]</p>
-                        <p>¿Qué te parece? ¡Respóndeme! 💕</p>
+                    <div class="strategy-header">
+                        <div class="strategy-icon">👥</div>
+                        <h4>Comunidad Premium</h4>
                     </div>
+                    <p>Grupo exclusivo de alta calidad con acceso anticipado, contenido premium y experiencias personalizadas.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <div class="strategy-icon">🎯</div>
+                        <h4>Contenido Interactivo</h4>
+                    </div>
+                    <p>Encuestas sofisticadas, challenges elegantes y contenido generado por usuarios que refuerce la identidad premium.</p>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <div class="strategy-icon">📈</div>
+                        <h4>Transparencia del Proceso</h4>
+                    </div>
+                    <p>Documentación elegante del desarrollo del producto, investigación y proceso de creación para generar confianza.</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Beneficios Exclusivos -->
-        <div class="exclusive-benefits">
-            <h2 class="script-font">Sé parte del círculo curly ✨</h2>
-            <p>Beneficios exclusivos para nuestra comunidad VIP</p>
-            <div class="benefits-list">
+        <!-- Beneficios VIP -->
+        <div class="vip-benefits">
+            <h2 class="serif-font">Acceso VIP</h2>
+            <p>Beneficios exclusivos para nuestra comunidad premium</p>
+            
+            <div class="benefits-grid">
                 <div class="benefit-item">
-                    <h4>🎁 Acceso Anticipado</h4>
-                    <p>48h antes que el público general</p>
+                    <h4>Acceso Anticipado</h4>
+                    <p>72 horas antes del lanzamiento público con descuento especial</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>💰 Descuento VIP</h4>
-                    <p>25% OFF en pre-venta exclusiva</p>
+                    <h4>Contenido Premium</h4>
+                    <p>Guías exclusivas, tutoriales avanzados y tips de expertos</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>📚 Guía Curly Gratis</h4>
-                    <p>E-book "Rutina Perfecta para tu Tipo de Rizo"</p>
+                    <h4>Experiencias Únicas</h4>
+                    <p>Webinars privados, Q&A con fundadoras y eventos exclusivos</p>
                 </div>
                 <div class="benefit-item">
-                    <h4>👑 Comunidad Privada</h4>
-                    <p>Grupo exclusivo con tips y soporte</p>
+                    <h4>Productos Limitados</h4>
+                    <p>Acceso a ediciones especiales y productos en desarrollo</p>
                 </div>
             </div>
         </div>
 
         <!-- CTA Final -->
         <div class="final-cta">
-            <h2 class="script-font">Tus rizos, tu historia... y estamos listas para contarla ✨</h2>
-            <p>Transformemos juntas a tu comunidad curly en 4 meses de pura magia</p>
-            <button class="cta-button">¡Empecemos esta aventura curly!</button>
+            <h2 class="serif-font">Tus rizos merecen lo mejor… y estamos listas para ofrecértelo</h2>
+            <p>Una estrategia premium diseñada para conectar con tu audiencia más valiosa y construir una comunidad leal antes del lanzamiento.</p>
+            <button class="cta-button">Implementemos esta estrategia premium</button>
         </div>
     </div>
 </body>
